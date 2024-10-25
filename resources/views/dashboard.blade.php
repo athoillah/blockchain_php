@@ -12,6 +12,22 @@
                     {{ __("You're logged in!") }}
                 </div>
             </div>
+
+            <!-- Tombol untuk membuat wallet -->
+            <div class="mt-4">
+                <form action="{{ route('wallet.create') }}" method="POST">
+                    @csrf
+                    <button type="submit" class="btn-primary">Create Wallet</button>
+                </form>
+            </div>
+
+            <!-- Tambahkan tombol atau tautan ke halaman Blockchain di bawah ini -->
+            <div class="mt-4">
+                <a href="{{ route('home') }}" class="btn btn-primary">
+                    Go to Blockchain Activity
+                </a>
+            </div>
+
         </div>
     </div>
 </x-app-layout>
