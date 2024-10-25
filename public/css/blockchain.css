@@ -71,3 +71,24 @@ td {
         padding: 15px;
     }
 }
+
+.auth-button {
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.btn-auth {
+    text-decoration: none;
+    background-color: #3498db;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-auth:hover {
+    background-color: #2980b9;
+}

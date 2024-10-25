@@ -10,6 +10,22 @@
 
 <body>
     <div class="container">
+        <!-- Tombol Login -->
+        <div class="auth-button">
+            @guest
+                <a href="{{ route('login') }}" class="btn-auth">Login</a>
+                <a href="{{ route('register') }}" class="btn-auth">Register</a>
+            @endguest
+
+            @auth
+                <form action="{{ route('logout') }}" method="POST" style="display: inline;">
+                    @csrf
+                    <button type="submit" class="btn-auth">Logout</button>
+                </form>
+            @endauth
+        </div>
+
+
         <h1>Blockchain Activity</h1>
         <table>
             <thead>
