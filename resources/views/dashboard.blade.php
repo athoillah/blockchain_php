@@ -21,12 +21,6 @@
                 </form>
             </div>
 
-            <!-- Tambahkan tombol atau tautan ke halaman Blockchain di bawah ini -->
-            <div class="mt-4">
-                <a href="{{ route('home') }}" class="btn btn-primary">
-                    Go to Blockchain Activity
-                </a>
-            </div>
 
         </div>
     </div>
