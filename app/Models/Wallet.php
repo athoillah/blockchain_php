@@ -14,6 +14,7 @@ class Wallet extends Model
         'user_id',
         'public_key',
         'secret_key',
+        'balance', // Tambahkan balance di sini
     ];
     /**
      * Relasi dengan model User

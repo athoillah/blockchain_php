@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('transactions', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('block_id')->constrained()->onDelete('cascade');
+            $table->foreignId('block_id')->constrained()->onDelete('cascade'); // relasi ke blok
             $table->string('sender');
             $table->string('recipient');
-            $table->decimal('amount', 16, 8);
+            $table->decimal('amount', 20, 2);
             $table->timestamps();
         });
     }

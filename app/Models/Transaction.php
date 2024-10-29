@@ -10,14 +10,25 @@ class Transaction extends Model
     use HasFactory;
 
     protected $fillable = [
-        'block_id',
-        'sender',
-        'recipient',
+        'sender_wallet_id',
+        'receiver_wallet_id',
         'amount',
+        'transaction_hash',
     ];
 
-    public function block()
+    /**
+     * Relasi ke Wallet Pengirim
+     */
+    public function senderWallet()
     {
-        return $this->belongsTo(Block::class);
+        return $this->belongsTo(Wallet::class, 'sender_wallet_id');
+    }
+
+    /**
+     * Relasi ke Wallet Penerima
+     */
+    public function receiverWallet()
+    {
+        return $this->belongsTo(Wallet::class, 'receiver_wallet_id');
     }
 }

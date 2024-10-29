@@ -12,10 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('wallets', function (Blueprint $table) {
-            $table->id();
-            $table->foreignId('user_id')->constrained()->onDelete('cascade'); // Menghubungkan dengan user
-            $table->string('public_key', 64)->unique();  // Kunci publik wallet
-            $table->string('secret_key', 64)->unique();  // Kunci rahasia wallet
+
+            $table->id(); // unsignedBigInteger secara default
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->string('public_key', 64)->unique();
+            $table->string('secret_key', 64)->unique();
+            $table->decimal('balance', 20, 2)->default(0);
             $table->timestamps();
         });
     }
